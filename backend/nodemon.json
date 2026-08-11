@@ -1,0 +1,14 @@
+{
+  "watch": [
+    "src",
+    "prisma"
+  ],
+  "ext": "ts,json",
+  "ignore": [
+    "dist",
+    "node_modules",
+    "uploads"
+  ],
+  "exec": "tsx watch src/server.ts",
+  "delay": "500"
+}

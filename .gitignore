@@ -1,0 +1,30 @@
+# ASAD KENYA FINANCE
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+coverage/
+*.log
+uploads/
+*.db
+*.db-journal
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.temp
+frontend/dist/
+backend/dist/
+
+# AI/editor agent files
+.agents/.claude/.windsurf/
+backend/.agents/
+backend/.claude/
+backend/.windsurf/
+
+# Generated/local output
+frontend/output.txt

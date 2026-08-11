@@ -1,0 +1,82 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+/src/generated/prisma
+# =====================================================
+# ASAD KENYA FINANCE - Backend .gitignore
+# =====================================================
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# Uploaded files
+uploads/images/*
+uploads/logos/*
+uploads/documents/*
+
+# Keep upload folders
+!uploads/images/.gitkeep
+!uploads/logos/.gitkeep
+!uploads/documents/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# ESLint
+.eslintcache
+
+# Testing
+test-results/
+playwright-report/
+
+# Miscellaneous
+*.zip
+*.tar
+*.gz
