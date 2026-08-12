@@ -37,9 +37,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
-
+      - - name: Build
+  env:
+    VITE_API_URL: https://asad-finance.onrender.com/api
+  run: npm run build
+  
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
