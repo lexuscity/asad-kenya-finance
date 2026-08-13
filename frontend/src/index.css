@@ -234,8 +234,8 @@ p {
       rgba(15, 23, 42, 0.55) 45%,
       rgba(15, 23, 42, 0.18) 100%
     ),
-    url("/images/asad-community.jpg") center center / cover
-      no-repeat;
+    url("/asad-kenya-finance/images/asad-community.jpg")
+      center center / 100% 100% no-repeat;
 }
 
 .hero-section::before {
@@ -292,7 +292,6 @@ p {
 .hero-visual {
   display: none;
 }
-
 /* ============================================================
    Buttons
    ============================================================ */
@@ -964,8 +963,7 @@ p {
   justify-content: center;
   gap: 5px;
   margin-left: auto;
-  border: 1px solid
-    rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--radius-sm);
   background: transparent;
 }
@@ -984,32 +982,6 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    .hero-section {
-  min-height: 700px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(15, 23, 42, 0.58) 0%,
-      rgba(15, 23, 42, 0.38) 45%,
-      rgba(15, 23, 42, 0.72) 100%
-    ),
-    url("/images/asad-community.jpg") center center / cover
-      no-repeat;
-}
-
-.hero-content {
-  min-height: 700px;
-  padding-block: 60px;
-}
-
-.hero-copy h1 {
-  font-size: clamp(2.7rem, 13vw, 4.2rem);
-}
-
-.hero-description {
-  font-size: 1rem;
-}
   }
 
   .brand {
@@ -1038,12 +1010,41 @@ p {
     padding: 12px 14px;
     text-align: center;
   }
-}
-.loan-product-card h4 {
-  margin-top: 24px;
-  margin-bottom: 8px;
-  color: var(--asad-navy);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+
+  /* Mobile hero */
+  .hero-section {
+    min-height: 700px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(15, 23, 42, 0.58) 0%,
+        rgba(15, 23, 42, 0.38) 45%,
+        rgba(15, 23, 42, 0.72) 100%
+      ),
+      url("/asad-kenya-finance/images/asad-community.jpg")
+        center center / 100% 100% no-repeat;
+  }
+
+  .hero-content {
+    min-height: 700px;
+    padding-block: 60px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.7rem, 13vw, 4.2rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .loan-product-card h4 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: var(--asad-navy);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 }
