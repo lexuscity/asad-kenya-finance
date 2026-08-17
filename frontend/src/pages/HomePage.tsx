@@ -99,6 +99,16 @@ function HomePage() {
         </div>
       </section>
 
+
+      <section className="community-image-section">
+        <img
+          src="/images/asad-community.jpg"
+          alt="ASAD Kenya community"
+        />
+      </section>
+
+    
+
       {error && (
         <section className="content-section">
           <div className="container">

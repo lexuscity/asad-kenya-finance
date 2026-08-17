@@ -233,9 +233,7 @@ p {
       rgba(15, 23, 42, 0.82) 0%,
       rgba(15, 23, 42, 0.55) 45%,
       rgba(15, 23, 42, 0.18) 100%
-    ),
-    url("/asad-kenya-finance/images/asad-community.jpg")
-      center center / 100% 100% no-repeat;
+    )
 }
 
 .hero-section::before {
@@ -252,9 +250,19 @@ p {
     );
 }
 
-.hero-section > * {
+.hero-section {
   position: relative;
-  z-index: 1;
+  min-height: 680px;
+  overflow: hidden;
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--asad-navy) 0%,
+      #172554 55%,
+      var(--asad-green-dark) 100%
+    );
 }
 
 .hero-content {
@@ -1012,19 +1020,6 @@ p {
   }
 
   /* Mobile hero */
-  .hero-section {
-    min-height: 700px;
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(15, 23, 42, 0.58) 0%,
-        rgba(15, 23, 42, 0.38) 45%,
-        rgba(15, 23, 42, 0.72) 100%
-      ),
-      url("/asad-kenya-finance/images/asad-community.jpg")
-        center center / 100% 100% no-repeat;
-  }
 
   .hero-content {
     min-height: 700px;
@@ -1047,4 +1042,19 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
+}
+
+/* ============================================================
+   Community Image
+   ============================================================ */
+
+.community-image-section {
+  width: 100%;
+  background: var(--white);
+}
+
+.community-image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
