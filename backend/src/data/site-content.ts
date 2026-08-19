@@ -34,7 +34,7 @@ export const siteContent: SiteInformation = {
       "ASAD Kenya Finance was established to support individuals and communities through accessible financial solutions and a group-based approach.",
 
     history:
-      "ASAD Kenya was established in 2019 and has focused on serving communities Kenya such as those in the Nyanza and Western regions of Kenya with the CEO being Milia Akhungu Nanzushi.",
+      "Since its establishment in 2019, ASAD Kenya has remained committed to serving communities across Kenya, with a dedicated focus on the Nyanza and Western regions. The organization is led by Chief Executive Officer, Milia Akhungu Nanzushi.",
 
     mission:
       "To provide accessible financial solutions that empower individuals and communities to improve their economic wellbeing.",
