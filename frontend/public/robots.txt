@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lexuscity.github.io/asad-kenya-finance/sitemap.xml
