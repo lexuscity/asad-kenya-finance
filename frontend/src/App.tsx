@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -11,7 +11,7 @@ import FaqPage from "./pages/FaqPage";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/asad-kenya-finance">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -25,7 +25,7 @@ function App() {
         <Route path="/cookies" element={<CookiesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
