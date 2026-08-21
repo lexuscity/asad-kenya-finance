@@ -2,26 +2,21 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import SiteLayout from "../components/layout/SiteLayout";
+import SEO from "../components/SEO";
 import { siteContentService } from "../services/site-content.service";
 import type { SiteAbout } from "../types/site.types";
 
 function AboutPage() {
-  const [about, setAbout] =
-    useState<SiteAbout | null>(null);
-
-  const [loading, setLoading] =
-    useState(true);
-
-  const [error, setError] =
-    useState("");
+  const [about, setAbout] = useState<SiteAbout | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     let mounted = true;
 
     const loadAbout = async () => {
       try {
-        const data =
-          await siteContentService.getAbout();
+        const data = await siteContentService.getAbout();
 
         if (mounted) {
           setAbout(data);
@@ -50,11 +45,15 @@ function AboutPage() {
 
   return (
     <SiteLayout>
+      <SEO
+        title="About ASAD Kenya Finance"
+        description="Learn about ASAD Kenya Finance, our history, mission, vision and commitment to supporting individuals and communities through accessible financial solutions."
+       
+       />
+
       <section className="page-hero">
         <div className="container">
-          <p className="eyebrow">
-            ABOUT US
-          </p>
+          <p className="eyebrow">ABOUT US</p>
 
           <h1>
             {about?.title ||
@@ -79,9 +78,7 @@ function AboutPage() {
       {error && (
         <section className="content-section">
           <div className="container">
-            <div className="form-error">
-              {error}
-            </div>
+            <div className="form-error">{error}</div>
           </div>
         </section>
       )}
@@ -91,9 +88,7 @@ function AboutPage() {
           <section className="content-section">
             <div className="container content-grid">
               <div>
-                <p className="eyebrow">
-                  OUR STORY
-                </p>
+                <p className="eyebrow">OUR STORY</p>
 
                 <h2>
                   A community-focused financial
@@ -102,9 +97,7 @@ function AboutPage() {
               </div>
 
               <div className="content-copy">
-                <p>
-                  {about.history}
-                </p>
+                <p>{about.history}</p>
               </div>
             </div>
           </section>
@@ -116,9 +109,7 @@ function AboutPage() {
                   OUR MISSION
                 </span>
 
-                <h2>
-                  {about.mission}
-                </h2>
+                <h2>{about.mission}</h2>
               </article>
 
               <article className="mission-card">
@@ -126,9 +117,7 @@ function AboutPage() {
                   OUR VISION
                 </span>
 
-                <h2>
-                  {about.vision}
-                </h2>
+                <h2>{about.vision}</h2>
               </article>
             </div>
           </section>
@@ -136,33 +125,25 @@ function AboutPage() {
           <section className="values-section">
             <div className="container">
               <div className="section-heading">
-                <p className="eyebrow">
-                  OUR VALUES
-                </p>
+                <p className="eyebrow">OUR VALUES</p>
 
-                <h2>
-                  What guides us
-                </h2>
+                <h2>What guides us</h2>
               </div>
 
               <div className="values-grid">
-                {about.coreValues.map(
-                  (value) => (
-                    <article
-                      className="value-card"
-                      key={value}
-                    >
-                      <h3>{value}</h3>
+                {about.coreValues.map((value) => (
+                  <article
+                    className="value-card"
+                    key={value}
+                  >
+                    <h3>{value}</h3>
 
-                      <p>
-                        A commitment to
-                        responsible and
-                        community-focused
-                        growth.
-                      </p>
-                    </article>
-                  ),
-                )}
+                    <p>
+                      A commitment to responsible
+                      and community-focused growth.
+                    </p>
+                  </article>
+                ))}
               </div>
             </div>
           </section>
@@ -172,13 +153,9 @@ function AboutPage() {
       <section className="cta-section">
         <div className="container cta-content">
           <div>
-            <p className="eyebrow">
-              ASAD KENYA
-            </p>
+            <p className="eyebrow">ASAD KENYA</p>
 
-            <h2>
-              Together We Grow
-            </h2>
+            <h2>Together We Grow</h2>
 
             <p>
               Explore our financial solutions or

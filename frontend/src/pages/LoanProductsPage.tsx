@@ -2,18 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import SiteLayout from "../components/layout/SiteLayout";
+import SEO from "../components/SEO";
 import { siteContentService } from "../services/site-content.service";
 import type { LoanProduct } from "../types/site.types";
 
 function LoanProductsPage() {
-  const [products, setProducts] =
-    useState<LoanProduct[]>([]);
-
-  const [loading, setLoading] =
-    useState(true);
-
-  const [error, setError] =
-    useState("");
+  const [products, setProducts] = useState<LoanProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     let mounted = true;
@@ -50,11 +46,15 @@ function LoanProductsPage() {
 
   return (
     <SiteLayout>
+      <SEO
+        title="Loan Products"
+        description="Explore financial solutions and loan products offered by ASAD Kenya Finance, including product features, eligibility information and how to make an enquiry."
+        
+      />
+
       <section className="page-hero">
         <div className="container">
-          <p className="eyebrow">
-            LOAN PRODUCTS
-          </p>
+          <p className="eyebrow">LOAN PRODUCTS</p>
 
           <h1>
             Financial solutions for your needs
@@ -70,9 +70,7 @@ function LoanProductsPage() {
       <section className="content-section">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">
-              OUR PRODUCTS
-            </p>
+            <p className="eyebrow">OUR PRODUCTS</p>
 
             <h2>
               Explore our financial solutions
@@ -90,9 +88,7 @@ function LoanProductsPage() {
           )}
 
           {error && (
-            <div className="form-error">
-              {error}
-            </div>
+            <div className="form-error">{error}</div>
           )}
 
           {!loading &&
@@ -117,17 +113,11 @@ function LoanProductsPage() {
                       ASAD KENYA
                     </span>
 
-                    <h3>
-                      {product.name}
-                    </h3>
+                    <h3>{product.name}</h3>
 
-                    <p>
-                      {product.description}
-                    </p>
+                    <p>{product.description}</p>
 
-                    <h4>
-                      Features
-                    </h4>
+                    <h4>Features</h4>
 
                     <ul>
                       {product.features.map(
@@ -139,16 +129,12 @@ function LoanProductsPage() {
                       )}
                     </ul>
 
-                    <h4>
-                      Eligibility
-                    </h4>
+                    <h4>Eligibility</h4>
 
                     <ul>
                       {product.eligibility.map(
                         (requirement) => (
-                          <li
-                            key={requirement}
-                          >
+                          <li key={requirement}>
                             {requirement}
                           </li>
                         ),
@@ -177,9 +163,7 @@ function LoanProductsPage() {
               IMPORTANT INFORMATION
             </p>
 
-            <h2>
-              Need more information?
-            </h2>
+            <h2>Need more information?</h2>
           </div>
 
           <div>

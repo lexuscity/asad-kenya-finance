@@ -5,6 +5,7 @@ import type {
 } from "react";
 
 import SiteLayout from "../components/layout/SiteLayout";
+import SEO from "../components/SEO";
 import { API_BASE_URL } from "../config/api";
 
 interface ContactForm {
@@ -37,10 +38,10 @@ function ContactPage() {
     useState("");
 
   const handleChange = (
-  event: ChangeEvent<
-    HTMLInputElement | HTMLTextAreaElement
-  >,
-) => {
+    event: ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement
+    >,
+  ) => {
     const { name, value } = event.target;
 
     setForm((current) => ({
@@ -98,19 +99,22 @@ function ContactPage() {
 
   return (
     <SiteLayout>
+      <SEO
+        title="Contact ASAD Kenya Finance"
+        description="Contact ASAD Kenya Finance for enquiries about our financial solutions, loan products and other information. Reach us by email, phone or through our online enquiry form."
+       
+      />
+
       <section className="page-hero">
         <div className="container">
-          <p className="eyebrow">
-            CONTACT US
-          </p>
+          <p className="eyebrow">CONTACT US</p>
 
-          <h1>
-            We'd love to hear from you
-          </h1>
+          <h1>We'd love to hear from you</h1>
 
           <p>
             Have a question about ASAD Kenya Finance?
-            Send us an enquiry and our team can assist.
+            Send us an enquiry and our team can
+            assist.
           </p>
         </div>
       </section>
@@ -118,9 +122,7 @@ function ContactPage() {
       <section className="contact-section">
         <div className="container contact-grid">
           <div className="contact-information">
-            <p className="eyebrow">
-              GET IN TOUCH
-            </p>
+            <p className="eyebrow">GET IN TOUCH</p>
 
             <h2>
               Contact ASAD Kenya Finance
@@ -134,6 +136,7 @@ function ContactPage() {
 
             <div className="contact-detail">
               <span>Email</span>
+
               <strong>
                 asadkenyafinance@gmail.com
               </strong>
@@ -141,16 +144,16 @@ function ContactPage() {
 
             <div className="contact-detail">
               <span>Phone</span>
+
               <strong>
-                +254 740720460  
+                +254 740720460
               </strong>
             </div>
 
             <div className="contact-detail">
               <span>Location</span>
-              <strong>
-                Kenya
-              </strong>
+
+              <strong>Kenya</strong>
             </div>
           </div>
 
@@ -162,6 +165,7 @@ function ContactPage() {
               <div className="form-row">
                 <label>
                   Name
+
                   <input
                     type="text"
                     name="name"
@@ -176,6 +180,7 @@ function ContactPage() {
 
                 <label>
                   Email
+
                   <input
                     type="email"
                     name="email"
@@ -190,6 +195,7 @@ function ContactPage() {
 
               <label>
                 Phone
+
                 <input
                   type="tel"
                   name="phone"
@@ -202,6 +208,7 @@ function ContactPage() {
 
               <label>
                 Subject
+
                 <input
                   type="text"
                   name="subject"
@@ -215,6 +222,7 @@ function ContactPage() {
 
               <label>
                 Message
+
                 <textarea
                   name="message"
                   value={form.message}

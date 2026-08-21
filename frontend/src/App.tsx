@@ -11,7 +11,7 @@ import FaqPage from "./pages/FaqPage";
 
 function App() {
   return (
-    <BrowserRouter basename="/asad-kenya-finance">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
