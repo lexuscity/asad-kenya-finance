@@ -1,4 +1,4 @@
-import { createServer } from "node:http";
+﻿import { createServer } from "node:http";
 
 import { createApp } from "./app.js";
 import { env } from "./config/env.js";
@@ -17,18 +17,20 @@ const server = createServer(app);
 
 /**
  * Start the HTTP server.
+ *
+ * Render requires the application to listen on 0.0.0.0
+ * using the PORT supplied by the hosting environment.
  */
-server.listen(env.PORT, () => {
+server.listen(env.PORT, "0.0.0.0", () => {
   logger.info("ASAD Kenya Finance website API started.", {
     environment: env.NODE_ENV,
+    host: "0.0.0.0",
     port: env.PORT,
   });
 });
 
 /**
  * Graceful shutdown.
- *
- * Allows active requests to finish before the process exits.
  */
 const shutdown = (signal: string): void => {
   logger.info("Shutdown signal received.", {
